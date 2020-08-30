@@ -1,6 +1,7 @@
 const fs = require("fs");
 
-const data = `## Project Title\r\nDiamond Blade :smile:`;
+const body = "## Project Title\r\nAxel White";
+const data = `${body}`;
 
 fs.writeFile("README.md", data, callback => {
   console.log("callback", callback);
