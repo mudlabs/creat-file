@@ -2,6 +2,8 @@ const fs = require("fs");
 
 const body = "## Project Title\r\nAxel White";
 
-fs.writeFile("project/READEM.md", "YOUR READY", cb => { 
-   console.log("CB", cb);
+fs.mkdirSync("project");
+fs.writeFile("./project/README.md", "MY README", c => {
+   if (c) return;
+   console.log("Saved");
 });
