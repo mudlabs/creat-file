@@ -2,8 +2,13 @@ const fs = require("fs");
 
 const body = "## Project Title\r\nAxel White";
 
-fs.mkdirSync("Axel White");
-fs.writeFile("./Axel White/README.md", "## Axel White", c => {
-   if (c) return;
-   console.log("Saved");
-});
+if (!fs.existsSync("Axel White")) {
+   fs.mkdir("Axel White", err => {
+      if (err) return err;
+      fs.writeFile("./Axel White/README.md", "## Axel White", err => {
+         if(err) return err;
+         console.log("Directory and File saved.");
+      });
+   });
+}
+
