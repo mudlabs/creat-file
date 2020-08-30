@@ -10,5 +10,10 @@ if (!fs.existsSync("Axel White")) {
          console.log("Directory and File saved.");
       });
    });
+} else {
+   fs.writeFile("./Axel White/README.md", `## Axel White\r\n${Date.now()}`, err => {
+      if(err) return err;
+      console.log("Directory and File updated");
+   });
 }
 
