@@ -1,4 +1,4 @@
 name: "Create README"
 runs:
-  using "node12"
+  using: "node12"
   main: "index.js"
