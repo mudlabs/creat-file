@@ -2,6 +2,8 @@ const fs = require("fs");
 
 const body = "## Project Title\r\nAxel White";
 
-fs.writeFile("Axel White/README.md", `${body}`, callback => {
-  console.log("callback", callback);
+fs.mkdir("Axel White", cb => {
+  fs.writeFile("README.md", `${body}`, cb => {
+    console.log("CB", cb);
+  });
 });
