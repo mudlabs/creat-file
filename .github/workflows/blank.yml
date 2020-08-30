@@ -27,7 +27,9 @@ jobs:
         run: echo Hello, world!
         
       - name: New File
-        run: touch README.md
+        run: |
+          touch README.md
+          echo "## Project Title\r\nBone Saw :smile: >> README.md
         
       - name: Add & Commit
         uses: EndBug/add-and-commit@v4.4.0
